@@ -20,6 +20,7 @@ Packages included in server:
 -   Http Status Codes
 -   Morgan logger
 -   Cors
+-   Node PG
 
 ---
 
@@ -48,3 +49,13 @@ Default env contents:
 -   `REACT_APP_BASEURL=http://localhost:3000`
 -   `REACT_APP_APIURL=http://localhost:3000/api`
 -   `PORT=3000`
+
+### Default API test routes
+
+You will need to have your Postgres DB already set up, with the .env file containing your connection ssl. All backend routes will begin with `/api/`
+
+| Route       | Expectation                                       |
+| ----------- | ------------------------------------------------- |
+| `/sanity`   | Basic json response                               |
+| `/ages`     | Return a sum of all user_age's in the users table |
+| `/user/:id` | Return a users data where user_id => :id          |
