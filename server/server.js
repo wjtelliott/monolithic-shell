@@ -28,4 +28,5 @@ app.get('*', (_, res) => {
 // START
 app.listen(port, () => {
     console.log(`Server is listening on PORT: ${port}`);
+    console.log('Server env:', process.env);
 });
