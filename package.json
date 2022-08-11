@@ -2,43 +2,13 @@
     "name": "you-betcha",
     "version": "1.0.0",
     "private": "true",
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.16.5",
-        "@testing-library/react": "^13.3.0",
-        "@testing-library/user-event": "^13.5.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.3.0",
-        "react-scripts": "5.0.1",
-        "web-vitals": "^2.1.4"
-    },
     "description": "YouBetcha Monolithic client/server",
     "scripts": {
-        "build": "GENERATE_SOURCEMAP=false react-scripts build && (cd server && npm install)",
-        "winbuild": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build && (cd server && npm install)",
-        "start": "cd server && node server.js",
-        "server": "nodemon -r dotenv/config ./server/server.js",
-        "client": "react-scripts start",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "build": "GENERATE_SOURCEMAP=false && (cd client && npm install && npm run build) && (cd ../server && npm install)",
+        "winbuild": "set \"GENERATE_SOURCEMAP=false\" && (cd client && npm install && npm run build) && (cd ../server && npm install)",
+        "server": "cd server && npm run start",
+        "client": "cd client && npm run start"
     },
     "author": "Will, Prashant, Ryan, Phil",
-    "license": "ISC",
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+    "license": "ISC"
 }

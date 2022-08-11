@@ -5,7 +5,7 @@ require('dotenv').config();
 const express = require('express'),
     app = express(),
     path = require('path'),
-    buildPath = path.join(__dirname, '../build/'),
+    buildPath = path.join(__dirname, '../client/build/'),
     port = process.env.PORT,
     logger = require('morgan'),
     cors = require('cors');
