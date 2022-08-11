@@ -6,6 +6,10 @@
     "scripts": {
         "start": "node server.js"
     },
+    "engines": {
+        "node": "16.14.2",
+        "npm": "8.5.0"
+    },
     "author": "Will, Prashant, Ryan, Phil",
     "license": "ISC",
     "dependencies": {
