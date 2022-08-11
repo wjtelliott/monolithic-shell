@@ -1,5 +1,5 @@
 {
-    "name": "you-betcha-client",
+    "name": "mono-client",
     "version": "1.0.0",
     "private": "true",
     "dependencies": {
@@ -16,8 +16,8 @@
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
     },
-    "description": "YouBetcha Client",
-    "author": "Will, Prashant, Ryan, Phil",
+    "description": "Monolithic Client",
+    "author": "Will",
     "license": "ISC",
     "scripts": {
         "start": "react-scripts start",

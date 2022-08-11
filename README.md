@@ -1,8 +1,8 @@
 <!-- @format -->
 
-# YouBetcha
+# Monolithic Server/Client
 
-## This is a monolithic approach to the PERN stack app YouBetcha
+## This is a monolithic approach to a PERN stack app
 
 Instructions:
 

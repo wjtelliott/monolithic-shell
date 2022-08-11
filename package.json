@@ -1,8 +1,8 @@
 {
-    "name": "you-betcha",
+    "name": "mono-client-server",
     "version": "1.0.0",
     "private": "true",
-    "description": "YouBetcha Monolithic client/server",
+    "description": "Monolithic client/server",
     "engines": {
         "node": "16.14.2",
         "npm": "8.5.0"
@@ -14,6 +14,6 @@
         "server": "cd server && npm run start",
         "client": "cd client && npm run start"
     },
-    "author": "Will, Prashant, Ryan, Phil",
+    "author": "Will",
     "license": "ISC"
 }

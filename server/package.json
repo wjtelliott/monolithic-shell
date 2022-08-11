@@ -1,7 +1,7 @@
 {
-    "name": "you-betcha-server",
+    "name": "mono-server",
     "version": "1.0.0",
-    "description": "YouBetcha server & api",
+    "description": "Monolithic server & api",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"
@@ -10,7 +10,7 @@
         "node": "16.14.2",
         "npm": "8.5.0"
     },
-    "author": "Will, Prashant, Ryan, Phil",
+    "author": "Will",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
