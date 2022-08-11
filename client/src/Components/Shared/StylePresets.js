@@ -6,4 +6,9 @@ stylePresets['centeredFlexBox'] = {
     justifyContent: 'center',
 };
 
+stylePresets['removeLinkDecor'] = {
+    textDecoration: 'none',
+    color: 'inherit',
+};
+
 module.exports = { ...stylePresets };

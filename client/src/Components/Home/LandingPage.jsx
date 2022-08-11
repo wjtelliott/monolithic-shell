@@ -31,12 +31,18 @@ const LandingPage = function () {
     }, []);
 
     return (
-        <Box sx={{ ...centeredFlexBox }}>
-            <Typography variant="h3">
+        <Box sx={{ ...centeredFlexBox, p: 3, my: 3 }}>
+            <Typography
+                variant="h3"
+                textAlign="center"
+            >
                 Here is the env var test:{' '}
                 {process.env.REACT_APP_TEST ?? 'NO .ENV LOADED'}
             </Typography>
-            <Typography variant="h4">
+            <Typography
+                variant="h4"
+                textAlign="center"
+            >
                 Here is a request to our linked back-end:{' '}
                 {JSON.stringify(responseData)}
             </Typography>
