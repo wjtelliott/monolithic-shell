@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material';
 import { centeredFlexBox, removeLinkDecor } from '../Shared/StylePresets';
 
 const AuthorizePage = () => {
-    const { user, isLoading, isAuthorized } = useAuth0();
+    const { user, isLoading, isAuthenticated } = useAuth0();
     const navigate = useNavigate();
     const [tooLong, setTooLong] = useState(false);
 
@@ -15,7 +15,7 @@ const AuthorizePage = () => {
         const abortEffect = () => abortController.abort();
         if (isLoading) return abortEffect;
 
-        if (!user || !isAuthorized) {
+        if (!isAuthenticated) {
             navigate('/');
             return abortEffect;
         }

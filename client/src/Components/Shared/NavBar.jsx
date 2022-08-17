@@ -17,6 +17,7 @@ import {
 } from '@mui/icons-material';
 import NavBarAvatar from './NavBarAvatar';
 import { logoTitle } from './SharedConsts';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account Settings'];
@@ -24,6 +25,8 @@ const settings = ['Profile', 'Account Settings'];
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
+
+    const { isAuthenticated, loginWithRedirect } = useAuth0();
 
     const navigate = useNavigate();
 
@@ -46,7 +49,9 @@ const NavBar = () => {
         setAnchorElUser(null);
     };
 
-    return (
+    return !isAuthenticated ? (
+        <Button onClick={loginWithRedirect}>Login</Button>
+    ) : (
         <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
