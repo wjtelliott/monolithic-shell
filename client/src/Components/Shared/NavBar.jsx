@@ -19,7 +19,7 @@ import NavBarAvatar from './NavBarAvatar';
 import { logoTitle } from './SharedConsts';
 
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account Settings', 'Logout'];
+const settings = ['Profile', 'Account Settings'];
 
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);

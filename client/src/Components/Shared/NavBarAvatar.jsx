@@ -8,6 +8,7 @@ import {
     Tooltip,
     MenuItem,
 } from '@mui/material';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const NavBarAvatar = ({
     settings,
@@ -15,6 +16,7 @@ const NavBarAvatar = ({
     handleCloseUserMenu,
     handleOpenUserMenu,
 }) => {
+    const { logout } = useAuth0();
     return (
         <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -52,6 +54,9 @@ const NavBarAvatar = ({
                         <Typography textAlign="center">{setting}</Typography>
                     </MenuItem>
                 ))}
+                <MenuItem onClick={logout}>
+                    <Typography textAlign="center">Logout</Typography>
+                </MenuItem>
             </Menu>
         </Box>
     );

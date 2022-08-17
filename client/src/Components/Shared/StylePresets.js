@@ -1,14 +1,12 @@
-const stylePresets = {};
-
-stylePresets['centeredFlexBox'] = {
+const centeredFlexBox = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
 };
 
-stylePresets['removeLinkDecor'] = {
+const removeLinkDecor = {
     textDecoration: 'none',
     color: 'inherit',
 };
 
-module.exports = { ...stylePresets };
+module.exports = { centeredFlexBox, removeLinkDecor };

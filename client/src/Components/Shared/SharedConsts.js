@@ -1,5 +1,3 @@
-const sharedConsts = {};
+const logoTitle = 'Mono Shell';
 
-sharedConsts['logoTitle'] = 'Mono-Shell';
-
-module.exports = { ...sharedConsts };
+module.exports = { logoTitle };
