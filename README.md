@@ -34,9 +34,10 @@ Git clone this repo, run `npm run build` for Linux/Mac or `npm run winbuild` for
 -   `winbuild` -> Windows syntax of the build script
 -   `server` -> Start the server _only_ \*
 -   `client` -> Start the client _only_
--   `start` -> Same as server above
+-   `start` -> Same as server script above, used by deploy
+-   `init` -> runs npm install on both client and server
 
-\*Server still only serves the build folder of react client
+\* Server still only serves the build folder of react client
 
 ### Default env files:
 
@@ -48,7 +49,17 @@ Default env contents:
 -   `REACT_APP_TEST=Env_var_test`
 -   `REACT_APP_BASEURL=http://localhost:3000`
 -   `REACT_APP_APIURL=http://localhost:3000/api`
+-   `REACT_APP_AUTH_DOMAIN=*INSERT AUTH0 DOMAIN*`
+-   `REACT_APP_AUTH_CLIENTID=*INSERT AUTH0 CLIENT ID*`
 -   `PORT=3000`
+
+### Default client routes
+
+| Route        | Expectation                                                                 |
+| ------------ | --------------------------------------------------------------------------- |
+| `/`          | Landing Page                                                                |
+| `/authorize` | Redirect page from Auth0. Send user data to backend and redirect to Landing |
+| `*`          | 404 Page                                                                    |
 
 ### Default API test routes
 
