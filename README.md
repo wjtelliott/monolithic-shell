@@ -12,6 +12,7 @@ Packages included in client:
 -   React Router Dom
 -   Mui, with icons-material
 -   AOS via CDN
+-   Auth0-React
 
 Packages included in server:
 
